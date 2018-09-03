@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+				<title>Score keeper</title>
+  			<link type = "text/css" rel = "stylesheet" href ="index.css">
+				<link type = "text/css" rel = "stylesheet" href ="bootstrap.min.css">
+				<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700" rel="stylesheet">
+				<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+				<link href="https://fonts.googleapis.com/css?family=Frank+Ruhl+Libre:400,700" rel="stylesheet">
+				<link href="https://fonts.googleapis.com/css?family=Frank+Ruhl+Libre:400,700" rel="stylesheet">
+				<link href="https://fonts.googleapis.com/css?family=Frank+Ruhl+Libre" rel="stylesheet">
+</head>
+  <body>
+
+			<div class="container">
+					<div class="jumbotron">
+					<h1>Evolution of Parental Roles</h1>
+					<p>&nbsp &nbsp &nbsp &nbspThis is a simple simulation to predict sex roles in parental care that we would expect to evolve under the specified assumptions. The model follows game-2 of Maynard Smith (1977), but makes the game consistent and incorporates various assumptions about male rematings and partial paternity. </p>
+			 		<p>The game assumes an equal number of males and females in the population who pair up with each other to lay their first clutches of the season-- the number of eggs laid by the female is Wc (which is also the total number of eggs she lays if she cares of the young). The female can lay a second clutch (of size Wd-Wc) if she deserts, and we assume that deserting females always get to remate. There is no third clutch.</p>
+					<p>The offspring survival depends on the number of parents caring: V0 with 0 parents caring, V1 with 1 parent (either father or mother) caring and V2 with both parents caring. We require that 0 </= V0 </= V1 </= V2 </= 1</p>
+					<p>Deserting males can have an advantage over caring males in dominating matings for the second clutch-- the extent of this domination is specified by the parameter a which lies between 0 and 1. When a is 0, caring and deserting males are equally likely to mate in the second round. When a is 1, deserting males completely exclude caring males from the second round of matings.</p>
+					<p>We also allow for females to mate multiply in the first round, and hence males to have only partial paternity of their clutches. The paternity of a caring male is p and that of a deserting male is r. We would expect 0 <= r <= p <=1.</p>
+					<p>Deserting males could also have an advantage in the extra-pair matings in the population-- the extent of this advantage is specified by b (lying between 0 and 1), which acts similar to the parameter a. When b is 0, caring and deserting males are equally likely to father the extra-pair young in the population. When b is 1, deserting males completely exclude caring males from extra-pair matings.</p>
+				</div>
+		 	</div>
+
+			<div class = "questions">
+				<p>
+Please specify the parameter values you would like to run this simulation for:</p>
+				<p>1.How many eggs does a female lay if she provides parental care? (Value of Wc)</p>
+				<input id = "wc" type = number>
+				<p>2. How many more can she lay if she does not care? (Wd-Wc)</p>
+				<input id = "ad" type = number>
+				<p>3. What is the survival probability of eggs with 0 parents caring? (V0)</p>
+				<p>&nbsp &nbsp (answer has to lie between 0 and 1)</p>
+				<input id = "v0" type = number > <span id = warning></span>
+				<p>4. What is the survival probability of eggs with 1 parent caring? (V1)</p>
+				<p>&nbsp &nbsp (answer has to lie between V0 and 1)</p>
+				<input id = "v1" type = number> <span id = warning1></span>
+				<p>5. What is the survival probability of eggs with 2 parents caring? (V2)</p>
+				<p>&nbsp &nbsp (answer has to lie between V1 and 1)</p>
+				<input id = "v2" type = number> <span id = warning2></span>
+				<p>6. What is the paternity of a caring male in his first clutch? (p)</p>
+				<p>&nbsp &nbsp (answer has to lie between 0 and 1)</p>
+				<input id = "p" type = number>
+				<p>7. What is the paternity of a deserting male in his first clutch? (r)</p>
+				<p>&nbsp &nbsp (answer has to lie between 0 and p)</p>
+				<input id = "r" type = number> <span id = warning3></span>
+				<p>8. To what extent do deserting males dominate the second round of matings? (a)</p>
+				<p>&nbsp &nbsp (answer has to lie between 0 and 1)</p>
+				<input id = "a" type = number>
+				<p>9.To what extent do deserting males dominate extra-pair matings (b)</p>
+				<p>&nbsp &nbsp (answer has to lie between 0 and 1)</p>
+				<input id = "b" type = number><br />
+				<input id="add" type="button" class="btn btn-primary" value="Submit"><br />
+				<p>&nbsp &nbspThe value of fd  <span id= message1 ></span><br /></p>
+				<p>&nbsp &nbspThe value of md  <span id= message2 ></span><br /></p>
+
+				<div class="footer">
+				<p> Contact </p>
+				<p>	Email Id</p>
+				</div>
+					<script
+      		src="https://code.jquery.com/jquery-3.3.1.js"
+      		integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+      		crossorigin="anonymous">
+					</script>
+
+			<script type = "text/javascript" src="index.js"></script>
+  </body>
+  </html>
