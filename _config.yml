@@ -12,8 +12,8 @@ site_theme               : "default" # Currently available options are "default"
 title                    : "Shreyas Shivakumara"
 title_separator          : "-"
 name                     : &name "Shreyas Shivakumara PhD"
-description              : &description "Shreyas Shivakumara's academic portfolio - PhD Student at Linköping University (Live Reload Test)"   # Update this with a general description of your site, this is the default if not overridden by a page
-url                      : https://shreyasshivakumara.github.io/ # The base hostname & protocol for your site e.g. "https://[your GitHub username].github.io",
+description              : &description "Shreyas Shivakumara's academic portfolio - PhD Student at Linköping University"   # Update this with a general description of your site, this is the default if not overridden by a page
+url                      : https://shreyasshivakumara.github.io # The base hostname & protocol for your site e.g. "https://[your GitHub username].github.io",
                                                            # or if you already have some other page hosted on Github then use "https://[your GitHub username].github.io/[Your Repo Name]"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "shreyas/academicpages.github.io"
