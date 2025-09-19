@@ -14,13 +14,5 @@ main:
   - title: "Teaching"
     url: /teaching/    
         
-  - title: "Master's Thesis"
-    url: /year-archive/
-    
   - title: "CV"
     url: /cv/
-    
-
-    
-  - title: "Guide"
-    url: /markdown/

@@ -19,6 +19,87 @@
   padding-left: 1.5rem !important;
 }
 
+/* Right-align navigation menu */
+.greedy-nav {
+  display: flex !important;
+  justify-content: flex-start !important;
+  align-items: center !important;
+  position: relative !important;
+}
+
+/* Position site title above profile picture */
+.masthead__menu-item--lg {
+  position: absolute !important;
+  left: 0 !important;
+  margin-left: 0 !important;
+  width: 280px !important; /* Match sidebar width */
+  text-align: center !important;
+}
+
+.masthead__menu-item--lg a {
+  text-align: center !important;
+  display: block !important;
+}
+
+.greedy-nav .visible-links {
+  display: flex !important;
+  margin-left: auto !important;
+  margin-right: 1rem !important;
+  list-style: none !important;
+  width: 100% !important;
+  justify-content: flex-end !important;
+}
+
+.masthead__menu-item {
+  margin-left: 1rem !important;
+}
+
+/* Align publication page title and metadata with content */
+.page__title {
+  padding-left: 3.5rem !important;
+  margin-bottom: 0.5em !important;
+}
+
+.page header p {
+  padding-left: 3.5rem !important;
+  margin-bottom: 0.5em !important;
+}
+
+.page__date {
+  padding-left: 3.5rem !important;
+}
+
+/* Fix alignment for publication and teaching list items */
+.archive .list__item {
+  padding-left: 3.5rem !important;
+}
+
+.archive .archive__item {
+  padding-left: 0 !important;
+  margin-left: 0 !important;
+}
+
+.archive .archive__item-title {
+  padding-left: 0 !important;
+  margin-left: 0 !important;
+}
+
+.archive .archive__item p {
+  padding-left: 0 !important;
+  margin-left: 0 !important;
+}
+
+/* Align section headings (like "Conference Papers") with content */
+.archive h2 {
+  padding-left: 3.5rem !important;
+  margin-bottom: 0.5em !important;
+}
+
+.archive hr {
+  margin-left: 3.5rem !important;
+  margin-right: 0 !important;
+}
+
 @media (max-width: 768px) {
   .page__content {
     padding-left: 2rem !important;
@@ -28,8 +109,32 @@
     padding-left: 2rem !important;
   }
   
-  .list__item {
-    padding-left: 1rem !important;
+  .archive .list__item {
+    padding-left: 2rem !important;
+  }
+  
+  .archive .archive__item {
+    padding-left: 0 !important;
+  }
+  
+  .archive h2 {
+    padding-left: 2rem !important;
+  }
+  
+  .archive hr {
+    margin-left: 2rem !important;
+  }
+  
+  .page__title {
+    padding-left: 2rem !important;
+  }
+  
+  .page header p {
+    padding-left: 2rem !important;
+  }
+  
+  .page__date {
+    padding-left: 2rem !important;
   }
 }
 </style>
