@@ -18,5 +18,13 @@ My research lies in the areas of computer graphics, computer vision, and AR/VR. 
 | Year | Degree | Institution |
 |------|--------|-------------|
 | 2023 - Present | PhD Student | Linköping University, Sweden |
-| 2021 - 2023 | Research Engineer | Linköping University, Sweden |
 | 2019 - 2021 | Masters in Computer Science | Uppsala University, Sweden |
+| 2015 - 2019 | Bachelor's in Computer Science and Technology | Nitte Meenakshi Institute of Technology, Bengaluru |
+
+## Experience
+
+| Year | Position | Organization |
+|------|----------|--------------|
+| 2021 - 2023 | Research Engineer | Linköping University, Sweden |
+| 2020 | Machine Learning Intern | Sustainlabs, Stockholm, Sweden |
+| 2018 - 2019 | Research Intern | Indian Institute of Science, Bengaluru, India |
