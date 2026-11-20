@@ -1,7 +1,7 @@
 ---
 title: "Adaptive Difficulty with Artificial Intelligence in Virtual Reality Games"
 collection: teaching
-period: 'Spring 2025'
+period: '2025'
 order: 2
 student: "Lovissa Svensson"
 type: "Master thesis supervision"
