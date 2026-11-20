@@ -2,7 +2,7 @@
 title: "TNM119 - Introduction to Artificial Intelligence"
 collection: teaching
 period: '2025'
-role: 'Assignment grading'
+role: 'Grading · hand-in assignments for 36 students'
 order: 4
 type: "Undergraduate course"
 venue: "Linköping University, Norrköping, Sweden"

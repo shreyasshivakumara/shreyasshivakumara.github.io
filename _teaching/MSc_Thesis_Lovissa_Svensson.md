@@ -1,9 +1,8 @@
 ---
-title: "Adaptive Difficulty Systems in Virtual Reality Racket Games"
+title: "Adaptive Difficulty with Artificial Intelligence in Virtual Reality Games"
 collection: teaching
 period: 'Spring 2025'
-role: 'MSc thesis, co-supervisor · student: Lovissa Svensson'
-order: 1
+order: 2
 student: "Lovissa Svensson"
 type: "Master thesis supervision"
 kind: supervision
