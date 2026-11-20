@@ -269,6 +269,13 @@
     </div>
   </section>
 
+  {% if page.hobbies %}
+  <section id="hobbies">
+    <h2>Hobbies</h2>
+    <p style="margin:0">{{ page.hobbies }}</p>
+  </section>
+  {% endif %}
+
   <footer>
     Last updated {{ site.time | date: "%B %Y" }}.
   </footer>
