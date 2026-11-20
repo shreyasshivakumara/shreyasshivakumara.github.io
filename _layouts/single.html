@@ -37,7 +37,7 @@ layout: default
         {% if page.collection == 'teaching' %}
           <p> {{ page.type }}, <i>{% if page.venueurl %}<a href="{{ page.venueurl }}" target="_blank">{{ page.venue }}</a>{% else %}{{ page.venue }}{% endif %}</i>, {{ page.date | default: "1900-01-01" | date: "%Y" }} </p>
         {% elsif page.venue and page.date %}
-          <p>Published in <i>{% if page.venueurl %}<a href="{{ page.venueurl }}" target="_blank">{{ page.venue }}</a>{% else %}{{ page.venue }}{% endif %}</i>, {{ page.date | default: "1900-01-01" | date: "%Y" }} </p>
+          <p>{% if page.status %}{{ page.status }}{% else %}Published in{% endif %} <i>{% if page.venueurl %}<a href="{{ page.venueurl }}" target="_blank">{{ page.venue }}</a>{% else %}{{ page.venue }}{% endif %}</i>, {{ page.date | default: "1900-01-01" | date: "%Y" }} </p>
         {% elsif page.date %}
           <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].date_label | default: "Published:" }}</strong> <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | default: "1900-01-01" | date: "%B %d, %Y" }}</time></p>
         {% endif %}    
