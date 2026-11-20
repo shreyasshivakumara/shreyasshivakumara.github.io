@@ -219,7 +219,7 @@
         <span class="when">{{ t.period }}</span>
         <span>
           {% if t.redirect_to %}<a class="what" href="{{ t.redirect_to }}">{{ t.title }}</a>{% else %}<span class="what">{{ t.title }}</span>{% endif %}
-          {% if t.role %}<span class="where"> · {{ t.role }}</span>{% endif %}
+          {% if t.role %}<br><span class="where">{{ t.role }}</span>{% endif %}
         </span>
       </li>
       {% endfor %}
