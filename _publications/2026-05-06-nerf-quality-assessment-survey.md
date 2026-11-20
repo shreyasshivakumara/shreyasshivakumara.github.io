@@ -4,7 +4,6 @@ collection: publications
 category: preprints
 authors: 'Shreyas Shivakumara, Gabriel Eilertsen, Karljohan Lundin Palmerius'
 thumbnail: /images/papers/nerf-qa-survey.jpg
-tldr: 'We review how NeRF quality is evaluated and test 21 quality metrics on synthetic and real-world datasets.'
 permalink: /publication/2026-05-06-nerf-quality-assessment-survey
 date: 2026-05-06
 venue: 'Multimedia Tools and Applications (Springer)'

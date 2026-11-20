@@ -4,7 +4,6 @@ collection: publications
 category: conferences
 authors: 'Shreyas Shivakumara, Gabriel Eilertsen, Karljohan Lundin Palmerius'
 thumbnail: /images/papers/metric-fusion.jpg
-tldr: 'We combine the DISTS and VMAF metrics and show that the combination matches human ratings of NeRF quality better than either metric on its own.'
 permalink: /publication/2025-09-16-metric-fusion-nerf-evaluation
 date: 2025-09-16
 venue: 'International Conference on Quality of Multimedia Experience (QoMEX)'

@@ -4,7 +4,6 @@ collection: publications
 category: preprints
 authors: 'Shreyas Shivakumara, Gabriel Eilertsen, Karljohan Lundin Palmerius'
 thumbnail: /images/papers/3dgs-vr.jpg
-tldr: 'We compare 3DGS reconstructions on a monitor and in a VR headset. Viewers notice the difference much more in stereo, and common metrics do not pick it up.'
 permalink: /publication/2026-09-29-3dgs-quality-in-vr
 date: 2026-09-29
 venue: 'arXiv preprint'

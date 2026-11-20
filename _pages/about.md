@@ -2,7 +2,7 @@
 permalink: /
 layout: onepage
 title: "Shreyas Shivakumara"
-role: "PhD student · Immersive Visualization · Linköping University"
+role: "PhD student, Immersive Visualization, Linköping University"
 hobbies: "When I'm not working, I'm usually out running. I do marathons and half marathons. I also play football and badminton, and from 2016 to 2019 I captained the IISc ultimate frisbee team at national tournaments."
 redirect_from:
   - /about/
