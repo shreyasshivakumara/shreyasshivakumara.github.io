@@ -2,10 +2,13 @@
 title: "Quality Assessment for Neural Radiance Fields: A Survey and Comparative Study"
 collection: publications
 category: preprints
+authors: 'Shreyas Shivakumara, Gabriel Eilertsen, Karljohan Lundin Palmerius'
+thumbnail: /images/papers/nerf-qa-survey.jpg
+tldr: 'A survey of subjective and objective quality assessment for NeRFs, with a benchmark of 21 metrics on synthetic and real-world data.'
 permalink: /publication/2026-05-06-nerf-quality-assessment-survey
 date: 2026-05-06
 venue: 'Multimedia Tools and Applications (Springer)'
-status: 'Under review at'
+badge: 'Under review'
 citation: 'Shivakumara, S., Eilertsen, G., & Lundin Palmerius, K. &quot;Quality Assessment for Neural Radiance Fields: A Survey and Comparative Study.&quot; Under review at <i>Multimedia Tools and Applications</i>.'
 ---
 

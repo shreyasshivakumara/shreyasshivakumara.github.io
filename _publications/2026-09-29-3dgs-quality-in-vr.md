@@ -2,10 +2,13 @@
 title: "Beyond Monoscopic Viewing: A Study on 3D Gaussian Splatting Quality in VR"
 collection: publications
 category: preprints
+authors: 'Shreyas Shivakumara, Gabriel Eilertsen, Karljohan Lundin Palmerius'
+thumbnail: /images/papers/3dgs-vr.jpg
+tldr: 'Floaters in sparse-view 3DGS barely matter on a monitor but strongly affect preference in stereo VR, and standard metrics miss this.'
 permalink: /publication/2026-09-29-3dgs-quality-in-vr
 date: 2026-09-29
-venue: 'arXiv'
-status: 'Preprint on'
+venue: 'arXiv preprint'
+badge: 'Preprint'
 paperurl: 'https://arxiv.org/pdf/2609.38525'
 arxivurl: 'https://arxiv.org/abs/2609.38525'
 citation: 'Shivakumara, S., Eilertsen, G., & Lundin Palmerius, K. (2026). &quot;Beyond Monoscopic Viewing: A Study on 3D Gaussian Splatting Quality in VR.&quot; <i>arXiv preprint</i> arXiv:2609.38525.'

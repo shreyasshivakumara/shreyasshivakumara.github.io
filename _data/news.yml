@@ -1,0 +1,11 @@
+# Newest first. `text` supports Markdown.
+- date: Sep 2026
+  text: 'New preprint on arXiv: [*Beyond Monoscopic Viewing: A Study on 3D Gaussian Splatting Quality in VR*](https://arxiv.org/abs/2609.38525).'
+- date: 2026
+  text: 'Our survey *Quality Assessment for Neural Radiance Fields* is under review at Multimedia Tools and Applications.'
+- date: 2025
+  text: 'Presented *Exploring Metric Fusion for Evaluation of NeRFs* at [QoMEX 2025](https://qomex2025.itec.aau.at/).'
+- date: Spring 2025
+  text: 'Co-supervised the MSc thesis *Adaptive Difficulty Systems in Virtual Reality Racket Games*.'
+- date: 2023
+  text: 'Started my PhD at Linköping University.'

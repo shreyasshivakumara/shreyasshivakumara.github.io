@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ site.author.name }}</title>
+  <meta name="description" content="{{ site.description }}">
+  <link rel="canonical" href="{{ site.url }}/">
+  <meta property="og:title" content="{{ site.author.name }}">
+  <meta property="og:description" content="{{ site.description }}">
+  <meta property="og:image" content="{{ site.url }}/images/profile.jpg">
+  <link rel="icon" href="{{ '/images/favicon.ico' | relative_url }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #ffffff;
+      --surface: #f6f7f9;
+      --text: #1d2228;
+      --muted: #5c6670;
+      --line: #e3e6ea;
+      --accent: #1a5fb4;
+      --accent-soft: #e8f0fb;
+      --tag: #8a5a00;
+      --tag-bg: #fdf3dc;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #14171b;
+        --surface: #1c2026;
+        --text: #e6e9ec;
+        --muted: #9aa4ae;
+        --line: #2b3038;
+        --accent: #78aeff;
+        --accent-soft: #1c2a3d;
+        --tag: #f0c46a;
+        --tag-bg: #3a2f17;
+      }
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 64px; }
+    body {
+      margin: 0; background: var(--bg); color: var(--text);
+      font: 17px/1.6 "Source Sans 3", system-ui, -apple-system, "Segoe UI", sans-serif;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .wrap { max-width: 880px; margin: 0 auto; padding: 0 20px; }
+
+    /* Top bar: name always links home; section links jump within the page */
+    .topbar {
+      position: sticky; top: 0; z-index: 10;
+      background: color-mix(in srgb, var(--bg) 88%, transparent);
+      backdrop-filter: blur(8px); border-bottom: 1px solid var(--line);
+    }
+    .topbar .wrap { display: flex; align-items: center; justify-content: space-between; height: 54px; gap: 16px; }
+    .topbar .home { font-weight: 700; color: var(--text); white-space: nowrap; }
+    .topbar nav { display: flex; gap: 18px; overflow-x: auto; }
+    .topbar nav a { color: var(--muted); font-size: 15px; white-space: nowrap; }
+    .topbar nav a:hover { color: var(--accent); text-decoration: none; }
+
+    /* Intro */
+    .intro { display: grid; grid-template-columns: 1fr 200px; gap: 40px; align-items: start; padding: 44px 0 12px; }
+    .intro h1 { font-size: 34px; line-height: 1.2; margin: 0 0 4px; }
+    .intro .role { color: var(--muted); margin: 0 0 16px; }
+    .intro p { margin: 0 0 12px; }
+    .intro img { width: 200px; height: 200px; object-fit: cover; object-position: 50% 20%; border-radius: 50%; }
+    .links { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
+    .links a {
+      font-size: 15px; font-weight: 600; padding: 5px 12px; border-radius: 999px;
+      background: var(--accent-soft); color: var(--accent);
+    }
+    .links a:hover { text-decoration: none; filter: brightness(0.96); }
+
+    section { padding: 28px 0 8px; }
+    h2 { font-size: 24px; margin: 0 0 14px; padding-bottom: 6px; border-bottom: 1px solid var(--line); }
+
+    /* News */
+    .news { list-style: none; margin: 0; padding: 0; }
+    .news li { display: grid; grid-template-columns: 92px 1fr; gap: 12px; padding: 5px 0; }
+    .news .date { color: var(--muted); font-variant-numeric: tabular-nums; }
+    .news p { margin: 0; }
+
+    /* Publications */
+    .pub { display: grid; grid-template-columns: 220px 1fr; gap: 24px; padding: 16px 0; border-bottom: 1px solid var(--line); }
+    .pub:last-child { border-bottom: 0; }
+    .pub .thumb {
+      background: #fff; border: 1px solid var(--line); border-radius: 8px;
+      height: 140px; display: flex; align-items: center; justify-content: center; overflow: hidden;
+    }
+    .pub .thumb img { max-width: 100%; max-height: 100%; object-fit: contain; }
+    .pub .title { font-weight: 700; font-size: 18px; line-height: 1.35; display: block; color: var(--text); }
+    .pub .authors { margin: 4px 0 2px; }
+    .pub .authors strong { font-weight: 700; }
+    .pub .venue { font-style: italic; color: var(--muted); }
+    .pub .status {
+      display: inline-block; font-style: normal; font-size: 13px; font-weight: 600;
+      padding: 1px 8px; border-radius: 4px; margin-left: 6px;
+      background: var(--tag-bg); color: var(--tag);
+    }
+    .pub .plinks { margin-top: 6px; font-size: 15px; }
+    .pub .plinks a + a::before, .pub .plinks a + details::before { content: " / "; color: var(--muted); }
+    .pub .tldr { margin: 8px 0 0; }
+    .pub details { display: inline; }
+    .pub summary { display: inline; cursor: pointer; color: var(--accent); list-style: none; }
+    .pub summary::-webkit-details-marker { display: none; }
+    .pub details[open] .abstract { display: block; margin-top: 8px; padding: 12px 14px; background: var(--surface); border-radius: 8px; font-size: 15px; }
+    .pub details[open] .abstract p { margin: 0 0 8px; }
+
+    /* Teaching + background */
+    .rows { list-style: none; margin: 0; padding: 0; }
+    .rows li { display: grid; grid-template-columns: 130px 1fr; gap: 12px; padding: 6px 0; }
+    .rows .when { color: var(--muted); }
+    .rows .what { font-weight: 600; }
+    .rows .where { color: var(--muted); }
+    .two { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+    .two h3 { font-size: 18px; margin: 0 0 6px; }
+
+    footer { color: var(--muted); font-size: 14px; padding: 36px 0 48px; border-top: 1px solid var(--line); margin-top: 32px; }
+
+    @media (max-width: 720px) {
+      body { font-size: 16px; }
+      .topbar .home { font-size: 15px; }
+      .topbar nav { gap: 12px; }
+      .topbar nav a { font-size: 14px; }
+      .topbar nav a[href='#background'] { display: none; }
+      .intro { grid-template-columns: 1fr; gap: 20px; padding-top: 28px; }
+      .intro img { width: 140px; height: 140px; order: -1; }
+      .pub { grid-template-columns: 1fr; gap: 12px; }
+      .pub .thumb { height: 160px; }
+      .two { grid-template-columns: 1fr; gap: 20px; }
+      .rows li, .news li { grid-template-columns: 1fr; gap: 0; }
+    }
+  </style>
+</head>
+<body>
+{% assign a = site.author %}
+{% assign cv = site.static_files | where: "path", "/files/Shreyas_Shivakumara_CV.pdf" | first %}
+{% assign pubs = site.publications | sort: "date" | reverse %}
+{% assign teaching = site.teaching | sort: "order" %}
+
+<header class="topbar">
+  <div class="wrap">
+    <a class="home" href="{{ '/' | relative_url }}">{{ a.name }}</a>
+    <nav>
+      {% if site.data.news %}<a href="#news">News</a>{% endif %}
+      <a href="#publications">Publications</a>
+      <a href="#teaching">Teaching</a>
+      <a href="#background">Background</a>
+      {% if cv %}<a href="{{ cv.path | relative_url }}">CV</a>{% endif %}
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="intro">
+    <div>
+      <h1>{{ a.name }}</h1>
+      <p class="role">{{ page.role }}</p>
+      {{ content }}
+      <div class="links">
+        {% if a.email %}<a href="mailto:{{ a.email }}">Email</a>{% endif %}
+        {% if cv %}<a href="{{ cv.path | relative_url }}">CV</a>{% endif %}
+        {% if a.googlescholar %}<a href="{{ a.googlescholar }}">Google Scholar</a>{% endif %}
+        {% if a.orcid %}<a href="{{ a.orcid }}">ORCID</a>{% endif %}
+        {% if a.github %}<a href="https://github.com/{{ a.github }}">GitHub</a>{% endif %}
+        {% if a.linkedin %}<a href="https://www.linkedin.com/in/{{ a.linkedin }}">LinkedIn</a>{% endif %}
+      </div>
+    </div>
+    <img src="{{ '/images/profile.jpg' | relative_url }}" alt="Photo of {{ a.name }}">
+  </div>
+
+  {% if site.data.news %}
+  <section id="news">
+    <h2>News</h2>
+    <ul class="news">
+      {% for n in site.data.news %}
+      <li><span class="date">{{ n.date }}</span>{{ n.text | markdownify }}</li>
+      {% endfor %}
+    </ul>
+  </section>
+  {% endif %}
+
+  <section id="publications">
+    <h2>Publications</h2>
+    {% for p in pubs %}
+    {% assign main = p.paperurl | default: p.arxivurl %}
+    <div class="pub">
+      <div class="thumb">{% if p.thumbnail %}<img src="{{ p.thumbnail | relative_url }}" alt="" loading="lazy">{% endif %}</div>
+      <div>
+        {% if main %}<a class="title" href="{{ main }}">{{ p.title }}</a>{% else %}<span class="title">{{ p.title }}</span>{% endif %}
+        <div class="authors">{{ p.authors | replace: a.name, "<strong>Shreyas Shivakumara</strong>" }}</div>
+        <span class="venue">{% if p.venueurl %}<a href="{{ p.venueurl }}">{{ p.venue }}</a>{% else %}{{ p.venue }}{% endif %}, {{ p.date | date: "%Y" }}</span>
+        {% if p.badge %}<span class="status">{{ p.badge }}</span>{% endif %}
+        <div class="plinks">
+          {% if p.paperurl %}<a href="{{ p.paperurl }}">paper</a>{% endif %}
+          {% if p.arxivurl %}<a href="{{ p.arxivurl }}">arXiv</a>{% endif %}
+          {% if p.codeurl %}<a href="{{ p.codeurl }}">code</a>{% endif %}
+          {% if p.posterurl %}<a href="{{ p.posterurl | relative_url }}">poster</a>{% endif %}
+          {% if p.slidesurl %}<a href="{{ p.slidesurl | relative_url }}">slides</a>{% endif %}
+          {% if p.content != "" %}<details><summary>abstract</summary><div class="abstract">{{ p.content }}</div></details>{% endif %}
+        </div>
+        {% if p.tldr %}<p class="tldr">{{ p.tldr }}</p>{% endif %}
+      </div>
+    </div>
+    {% endfor %}
+  </section>
+
+  <section id="teaching">
+    <h2>Teaching &amp; Supervision</h2>
+    <ul class="rows">
+      {% for t in teaching %}
+      <li>
+        <span class="when">{{ t.period }}</span>
+        <span>
+          {% if t.redirect_to %}<a class="what" href="{{ t.redirect_to }}">{{ t.title }}</a>{% else %}<span class="what">{{ t.title }}</span>{% endif %}
+          <span class="where"> · {{ t.role }}</span>
+        </span>
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+
+  <section id="background">
+    <h2>Background</h2>
+    <div class="two">
+      <div>
+        <h3>Education</h3>
+        <ul class="rows">
+          {% for e in site.data.background.education %}
+          <li><span class="when">{{ e.years }}</span><span><span class="what">{{ e.degree }}</span><br><span class="where">{{ e.place }}</span></span></li>
+          {% endfor %}
+        </ul>
+      </div>
+      <div>
+        <h3>Experience</h3>
+        <ul class="rows">
+          {% for e in site.data.background.experience %}
+          <li><span class="when">{{ e.years }}</span><span><span class="what">{{ e.role }}</span><br><span class="where">{{ e.place }}</span></span></li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    Last updated {{ site.time | date: "%B %Y" }}.
+  </footer>
+</main>
+</body>
+</html>
