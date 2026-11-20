@@ -15,6 +15,6 @@ redirect_from:
   - /publication/2026-05-06-nerf-quality-assessment-survey
 ---
 
-I am a PhD student in the Department of Science and Technology at Linköping University (Campus Norrköping), supervised by [Karljohan Lundin Palmerius](https://liu.se/en/employee/karlu20) and co-supervised by [Gabriel Eilertsen](https://liu.se/en/employee/gabei62) and Patric Ljung. Before this, I was a research engineer at Linköping University, building data infrastructure for medical AI (BIGPICTURE, AIDA Data Hub).
+I am a PhD student at the Department of Science and Technology, Linköping University (Campus Norrköping). I am supervised by [Karljohan Lundin Palmerius](https://liu.se/en/employee/karlu20) and co-supervised by [Gabriel Eilertsen](https://liu.se/en/employee/gabei62) and Patric Ljung. Before my PhD, I worked as a research engineer at Linköping University on the BIGPICTURE project and the AIDA Data Hub.
 
-My research is on the **perceptual quality of neural scene representations** — NeRFs and 3D Gaussian Splatting — and how they hold up in **immersive VR**. I study where standard image-quality metrics disagree with what people actually see, and develop evaluation methods that close that gap, including stereoscopic user studies in head-mounted displays. More broadly, I am interested in deep learning for photorealistic real-time graphics.
+My research is in computer graphics, computer vision and VR. I work on neural scene representations such as NeRFs and 3D Gaussian Splatting, and on how to evaluate their quality. Most of my work compares image quality metrics with what people actually see, especially when the scenes are viewed in a VR headset.
