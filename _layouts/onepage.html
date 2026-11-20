@@ -147,6 +147,7 @@
       {% if site.data.news %}<a href="#news">News</a>{% endif %}
       <a href="#publications">Publications</a>
       <a href="#teaching">Teaching</a>
+      <a href="#supervision">Supervision</a>
       <a href="#background">Background</a>
       {% if cv %}<a href="{{ cv.path | relative_url }}">CV</a>{% endif %}
     </nav>
@@ -207,10 +208,16 @@
     {% endfor %}
   </section>
 
-  <section id="teaching">
-    <h2>Teaching &amp; Supervision</h2>
+{% assign teach_items = teaching | where_exp: "t", "t.kind != 'supervision'" %}
+  {% assign sup_items = teaching | where: "kind", "supervision" %}
+  {% for grp in (1..2) %}
+  {% if grp == 1 %}{% assign items = teach_items %}{% assign sid = "teaching" %}{% assign stitle = "Teaching" %}
+  {% else %}{% assign items = sup_items %}{% assign sid = "supervision" %}{% assign stitle = "Supervision" %}{% endif %}
+  {% if items.size > 0 %}
+  <section id="{{ sid }}">
+    <h2>{{ stitle }}</h2>
     <ul class="rows">
-      {% for t in teaching %}
+      {% for t in items %}
       <li>
         <span class="when">{{ t.period }}</span>
         <span>
@@ -221,6 +228,8 @@
       {% endfor %}
     </ul>
   </section>
+  {% endif %}
+  {% endfor %}
 
   <section id="background">
     <h2>Background</h2>
