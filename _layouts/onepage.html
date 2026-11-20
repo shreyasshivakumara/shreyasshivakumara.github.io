@@ -66,12 +66,8 @@
     .intro .role { color: var(--muted); margin: 0 0 16px; }
     .intro p { margin: 0 0 12px; }
     .intro img { width: 200px; height: 200px; object-fit: cover; object-position: 50% 20%; border-radius: 50%; }
-    .links { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
-    .links a {
-      font-size: 15px; font-weight: 700; padding: 5px 12px; border-radius: 999px;
-      background: var(--accent-soft); color: var(--accent);
-    }
-    .links a:hover { text-decoration: none; filter: brightness(0.96); }
+    .links { margin-top: 16px; }
+    .links a + a::before { content: "/"; color: var(--muted); margin: 0 10px; display: inline-block; }
 
     section { padding: 28px 0 8px; }
     h2 { font-size: 22px; font-weight: 400; margin: 0 0 14px; padding-bottom: 6px; border-bottom: 1px solid var(--line); }
